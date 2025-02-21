@@ -47,33 +47,3 @@ while True:
     result = np.argmax(r) # Tahmin edilen sınıfı belirler. 
 
     time_predict = time.time() - time_start # Tahmin süresini hesaplar.
-
-    # 0 > down,  1 > right   2 > up
-    if ((result == 0) and (last_result != 0)): # Eğer tahmin sonucu 0 ise VE bir önceki sonuç 0 değilse:
-        keyboard.press(keyboard.KEY_DOWN)  # Klavyede 'aşağı' tuşuna bas.
-        print("if çalıştı ", result)
-    elif result == 2:
-        if last_result == 0: # bir önceki adımda Trex eğilmiştir
-            keyboard.release(keyboard.KEY_DOWN)
-        keyboard.press_and_release(keyboard.KEY_UP)
-        print("elif çalıştı ", result)
-    last_result = result # Son sonucu günceller. last_result değişkenini
-    counter = 1
-
-    if (time.time() - framerate_time) > 1:  # Eğer geçen süre 1 saniyeden fazlaysa:
-
-        current_framerate = counter /( time.time() - framerate_time)
-        counter = 0
-        framerate_time = time.time() # şimdiki zamanı sakla bir sonraki turda bir önceki zaman olması
-        delay -= 0.0001
-
-        if delay < 0:
-            delay = 0
-
-    # os.system("cls")
-    # i += 1
-    time.sleep(delay)
-
-
-
-
