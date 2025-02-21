@@ -48,10 +48,10 @@ for img in imgs:
     # görüntünin piksel değerlerini 0 ve 1 arasında normalleştir.
     im = im / 255
 
-    if "down" not in label:
-        # listelere ekle
-        X.append(im) # girdi  un, su, tuz
-        Y.append(label) # çıktı  ekmek
+    
+    # listelere ekle
+    X.append(im) # girdi  un, su, tuz
+    Y.append(label) # çıktı  ekmek
 
     
 # listeleri array (diziler) çevir
