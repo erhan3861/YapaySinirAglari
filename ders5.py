@@ -29,7 +29,7 @@ def onehot_labels(values):
     return onehot_encoded
 
 
-imgs = glob.glob("img2/*.png")
+imgs = glob.glob("img/*.png")
 width = 250
 height = 100
 
@@ -130,4 +130,4 @@ scores = model.evaluate(test_X, test_y)  # Test verileriyle modelin performansı
 print(f"Test: {model.metrics_names[1]} : {scores[1]*100}")  # Test doğruluğunu ekrana yazdır.
 
 open("model.json","w").write(model.to_json())  # Modelin mimarisini JSON dosyasına kaydet.
-model.save_weights("trex_weight_2_class.h5")  # Modelin ağırlıklarını H5 dosyasına kaydet.
+model.save_weights("trex_weight.h5")  # Modelin ağırlıklarını H5 dosyasına kaydet.
