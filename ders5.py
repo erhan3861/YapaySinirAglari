@@ -99,7 +99,7 @@ model.add(Dense(128, activation='relu'))  # Tamamen bağlı (Dense) katman eklen
 model.add(Dropout(0.4))  # Dropout katmanı tekrar ekleniyor.
 # 0.4: Nöronların %40'ı eğitim sırasında rastgele olarak devre dışı bırakılacak.
 
-model.add(Dense(2, activation='softmax'))  # Çıkış katmanı ekleniyor.
+model.add(Dense(3, activation='softmax'))  # Çıkış katmanı ekleniyor.
 # 3: 3 sınıf var.
 # activation='softmax': Softmax aktivasyon fonksiyonu, olasılık dağılımı üretecek.
 
